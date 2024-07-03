@@ -1,2 +1,0 @@
-# GymTrack
-N/A
