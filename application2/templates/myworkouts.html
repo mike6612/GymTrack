@@ -1,0 +1,27 @@
+{% extends "layout2.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center">
+    <div class="col-md-8 offset-md-2" style="margin-top: -5px;"> {# Adjust margin-top value to move the form up #}
+        <!-- Form to add a new workout section -->
+        <form method="POST" action="{{ url_for('myworkouts') }}" style="margin-bottom: 10px;">
+            <fieldset class="form-group">
+                <legend>My Workouts</legend>
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.section_title.label }} <br>
+                    {{ form.section_title(size=35, class_="form-control rounded-0") }}
+                    {% for error in form.section_title.errors %}
+                        <span class="error-message">{{ error }}</span>
+                    {% endfor %}
+                </div>
+                <div class="other-form-group">
+                    {{ form.submit(class_="btn btn-primary") }}
+                </div>
+            </fieldset>
+        </form>
+</div>
+</div>
+
+
+{% endblock %}

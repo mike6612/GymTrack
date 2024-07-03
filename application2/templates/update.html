@@ -1,0 +1,23 @@
+{% extends "layout2.html" %}
+
+{% block content %}
+<div class = "container">
+	<div>
+		<div class="col-md-12 tex-center"> <h1>Edit Workout Section</h1></div>
+	</div>
+        <form method = "post" action ="">
+        <table class="table">
+        <tr>
+                <td> Section Title </td>
+                <td><input type="text" name ="section_title" class = "form-control" value="{{ sections.section_title }}"></td>
+        </tr>
+        <tr>
+                <td colspan="2">
+                        <input type="submit" name="submit" value="Submit" class="btn btn-warning">
+                </td>
+        </tr>
+        </table>
+        </form>
+
+</div>
+{% endblock %}

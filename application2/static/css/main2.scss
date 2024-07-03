@@ -1,0 +1,124 @@
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+body {
+
+    background: url('../images/background-of-gym-with-big-window-vector.jpg');
+    height: 100vh; // Adjust as per your need
+    background-blend-mode: multiply;
+    // Center and scale the background image nicely
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+@media(max-width: 991px){
+	.sidebar{
+		background-color: rgba(255,255,255,0.15);
+		backdrop-filter: blur(10px);
+	}
+}
+
+
+input[type=text], input[type=password] {
+    width: 50%;
+
+    padding: 7px;
+    /* margin: 5px 0 22px 0; */
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+@media (max-width: 600px) {
+    background-color: #ddd;
+    outline: none;
+}
+}
+
+.top-container {
+    background: #ccc;
+    padding:5px;
+    border-bottom:2px solid #0f0f0f;
+
+}
+
+
+.error-message {
+    color: #8B0000;
+}
+
+.custom-dropdown {
+    max-width: 278px; /* Limit the maximum width */
+
+}
+
+@media (max-width: 1199px) {
+    .custom-dropdown {
+        max-width: 230px;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .custom-dropdown {
+	max-width: 178px;
+    }
+}
+
+@media (max-width: 767px) {
+    .custom-dropdown {
+	max-width: 188px;
+    }
+}
+
+.other-form-group {
+    margin-top: 20px; /* Adjust the value as needed */
+}
+
+.custom-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: lightgray;
+    padding: 20px;
+}
+ 
+.table thead tr th {
+    background-color: darkolivegreen;
+}
+
+body #note textarea:focus {
+  outline: 2px solid blue;
+  background-color: #d7d7d7!important;
+}
+
+body #note select:focus {
+  outline: 2px solid blue;
+  background-color: #d7d7d7!important;
+}
+
+.action-button {
+  display: inline-block;
+  font-size: 24px;
+  margin-right: 10px; /* Add some spacing between actions */
+}
+
+.action-form {
+  display: inline-block; /* Make the form inline-block */
+  margin: 0; /* Remove default margin from the form */
+}
+ 
+.action-form button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer; /* Change cursor to pointer for the button */
+}
+
+/* Optional: Style adjustments for icons */
+.action-icon {
+  color: inherit; /* Inherit color from parent */
+}

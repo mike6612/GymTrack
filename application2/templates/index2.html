@@ -1,0 +1,25 @@
+{% extends "layout2.html" %}
+
+{% block content %}
+    <style>
+        .custom-move-up {
+            margin-top: -180px; /* Increase the negative value to move the content higher */
+        }
+	.custom-move-up-again{
+		margin-top: -250px;
+	}
+	.custom-move-up-again-again{
+		margin-top: -260px;
+	}
+    </style>
+    <div class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center text-black fs-1 custom-move-up">
+        <h1>Welcome to GymTrack!</h1>
+    </div>
+    <div class="d-flex flex-column align-items-center {% if login %}custom-move-up-again{% else %}custom-move-up-again-again{% endif %}">
+   {% if session['username'] %}
+        <h3>Let's get started</h3>
+    {% else %}
+        <p>Already Registered <a href='{{ url_for('login') }}'>Login</a></p>
+    {% endif %}
+   </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout2.html" %}
+
+{% block content %}
+
+<div class="container">
+<div>
+        <div class="col-md-12 tex-center"> <h1>Delete Note</h1></div>
+</div>
+<form action='' method="post">
+        Click YES to confirm
+        <input type = "submit" value="YES" class="btn btn-danger">
+        <a href='/{{note.section_title }}/notes'>Cancel</a>
+</form>
+</div>
+
+{% endblock %}
+
