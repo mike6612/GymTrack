@@ -65,6 +65,7 @@ flask run
 1. Open your web browser and go to `http://localhost:5000/home` to access the application.
 2. Register as a user and log in to your account.
 3. Create, delete, or update workout sections.
-4. Create, delete or update workout notes.
+4. Add, delete or edit workout notes.
+   
 
 
