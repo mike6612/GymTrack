@@ -50,14 +50,7 @@ pip install -r project3requirements.txt
 3. Set up the MongoDB database and configure the database URI in `project3config.py`.
 
 4. Run the Flask backend:
-   
-## Usage
-
-1. Open your web browser and go to `http://localhost:3000` to access the application.
-2. Register as a patient or nurse and log in to your account.
-3. Schedule vaccination appointments or record vaccinations as a nurse.
-4. Manage your profile and view vaccination records.
-flask run
+   flask run
 
 ## Usage
 
