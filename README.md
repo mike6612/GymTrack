@@ -75,8 +75,8 @@ These are the following API endpoints:
 - **GET /api**: Fetch all users
 - **POST /api**: Create a user
 - **GET /api/(idx)**: Fetch data for a certain user
-- **PUT /api/idx**: Update data for a certain user
-- **DELETE /api/<idx>**: Delete a user and related data.
+- **PUT /api/(idx)**: Update data for a certain user
+- **DELETE /api/(idx)**: Delete a user and related data.
 
 ## Contributing
 Contributions are welcome! If you'd like to contribute to GymTrack, please fork the repository, make changes, and submit a pull request.
