@@ -52,7 +52,19 @@ pip install -r project3requirements.txt
 
 4. Run the Flask backend:
    
+## Usage
+
+1. Open your web browser and go to `http://localhost:3000` to access the application.
+2. Register as a patient or nurse and log in to your account.
+3. Schedule vaccination appointments or record vaccinations as a nurse.
+4. Manage your profile and view vaccination records.
 flask run
 
+## Usage
+
+1. Open your web browser and go to `http://localhost:5000/home` to access the application.
+2. Register as a user and log in to your account.
+3. Create, delete, or update workout sections.
+4. Create, delete or update workout notes.
 
 
