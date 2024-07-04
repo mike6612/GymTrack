@@ -48,7 +48,7 @@ To run GymTrack locally, follow these instructions:
 2. Install Python dependencies:
 pip install -r project3requirements.txt
 
-3. Set up the MongoDB database and configure the database URI in `config.py`.
+3. Set up the MongoDB database and configure the database URI in `project3config.py`.
 
 4. Run the Flask backend:
 python app.py
