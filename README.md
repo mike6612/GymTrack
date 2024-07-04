@@ -66,6 +66,23 @@ flask run
 2. Register as a user and log in to your account.
 3. Create, delete, or update workout sections.
 4. Add, delete or edit workout notes.
+
+
+## API Endpoints
+
+These are the following API endpoints:
+
+- **GET /api**: Fetch all users
+- **POST /api**: Create a user
+- **GET /api/<idx>**: Fetch data for a certain user
+- **PUT /api/<idx>**: Update data for a certain user
+- **DELETE /api/<idx>**: Delete a user and related data.
+
+## Contributing
+Contributions are welcome! If you'd like to contribute to GymTrack, please fork the repository, make changes, and submit a pull request.
+
+If you encounter any bugs or have suggestions for improvements, please open an issue on GitHub.
+
    
 
 
