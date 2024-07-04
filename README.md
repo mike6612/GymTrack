@@ -53,12 +53,5 @@ pip install -r project3requirements.txt
 4. Run the Flask backend:
 python app.py
 
-5. Navigate to the frontend directory and install npm dependencies:
 
-cd ../frontend
-npm install
-
-6. Run the React frontend:
-
-npm start
 
