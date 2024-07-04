@@ -74,8 +74,8 @@ These are the following API endpoints:
 
 - **GET /api**: Fetch all users
 - **POST /api**: Create a user
-- **GET /api/<idx>**: Fetch data for a certain user
-- **PUT /api/<idx>**: Update data for a certain user
+- **GET /api/(idx)**: Fetch data for a certain user
+- **PUT /api/idx**: Update data for a certain user
 - **DELETE /api/<idx>**: Delete a user and related data.
 
 ## Contributing
