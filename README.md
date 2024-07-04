@@ -11,7 +11,6 @@ GymTrack is a web application designed to support individuals in managing their 
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## About
 
