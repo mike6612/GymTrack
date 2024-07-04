@@ -51,7 +51,7 @@ pip install -r project3requirements.txt
 3. Set up the MongoDB database and configure the database URI in `project3config.py`.
 
 4. Run the Flask backend:
-python app.py
+flask run
 
 
 
