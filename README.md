@@ -36,24 +36,19 @@ To run GymTrack locally, follow these instructions:
 ### Prerequisites
 
 - Python 3.x
-- Node.js
-- npm (Node Package Manager)
-- MySQL
+- MongoDB
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/vaccination-management-system.git
+   git clone https://github.com/yourusername/GymTrack.git
 
-2. Navigate to the backend directory and install Python dependencies:
-cd vaccination-management-system/backend
-pip install -r requirements.txt
+2. Install Python dependencies:
+pip install -r project3requirements.txt
 
-
-
-3. Set up the MySQL database and configure the database URI in `config.py`.
+3. Set up the MongoDB database and configure the database URI in `config.py`.
 
 4. Run the Flask backend:
 python app.py
