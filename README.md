@@ -24,6 +24,8 @@ GymTrack is a note-taking hub where users can create personalized workout sessio
 - Create detailed notes to track progress.
 
 ## Technologies Used
-
-
-
+- Flask (Backend framework)
+- Bootstrap (CSS framework)
+- MongoDB(Database)
+- Flask-Bcrypt(Password hashing)
+  
