@@ -42,7 +42,7 @@ To run GymTrack locally, follow these instructions:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/GymTrack.git
+   git clone https://github.com/mike6612/GymTrack.git
 
 2. Install Python dependencies:
 pip install -r project3requirements.txt
