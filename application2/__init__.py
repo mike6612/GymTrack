@@ -3,7 +3,7 @@ from project3config import Config
 from flask_mongoengine import MongoEngine
 from flask_restx import Api
 
-api = Api()
+api = Api(prefix="/api", doc="/doc")
 
 app2 = Flask(__name__)
 app2.config.from_object(Config)

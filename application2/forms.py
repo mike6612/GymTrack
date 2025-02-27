@@ -1,11 +1,11 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, SelectField
 from wtforms.validators import DataRequired, Email, Length, EqualTo, ValidationError
 from application2.models import User, WorkoutSection, WorkoutNotes
 
 class LoginForm(FlaskForm):
     email   = StringField("Email", validators=[DataRequired(), Email()])
-    password = PasswordField("Password", validators=[DataRequired(), Length(min=6,max=15)])
+    password = PasswordField("Password", validators=[DataRequired(), Length(min=5)])
     remember_me = BooleanField("Remember Me")
     submit = SubmitField("Login")
 
@@ -27,6 +27,7 @@ class AddWorkoutSectionForm(FlaskForm):
 	submit = SubmitField("Add Section")
 
 class AddWorkoutNoteForm(FlaskForm):
-	section_title = StringField("Workout Section Name", validators=[DataRequired(), Length(min=1, max=50)])
-	note  = TextAreaField("Note", validators=[DataRequired(), Length(min = 1, max = 200)])
-	submit = SubmitField("Add Note")
+    # section_title = StringField("Workout Section Name", validators=[DataRequired(), Length(min=1, max=50)])
+    section_title = SelectField("Workout Section Name")
+    note  = TextAreaField("Note", validators=[DataRequired(), Length(min = 1, max = 200)])
+    submit = SubmitField("Add Note")

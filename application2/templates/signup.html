@@ -2,41 +2,41 @@
 
     {% block content %}
 
-    <div class="container">
+    <div class="container mt-5 ">
          <form name="login" action="" method="post" novalidate>
         <fieldset class="form-group">
             <legend>{{title}}</legend>
             {{ form.hidden_tag() }}
-                <p> {{ form.email.label }}</br>
-                    {{ form.email(style="background-color:white;") }}
+                <p>{{ form.email.label }}</br>
+                    {{ form.email(class="form-control rounded-2 bg-white")}}
                     {% for error in form.email.errors %}
                      <span class="error-message">{{ error }}</span>
                     {% endfor %}
                 </p>
 
-                <p> {{ form.password.label }}</br>
-                    {{ form.password(style="background-color:white;") }}
+                <p> {{ form.password.label}}</br>
+                    {{ form.password(class="form-control rounded-2 bg-white") }}
                     {% for error in form.password.errors %}
                      <span class="error-message">{{ error }}</span>
                     {% endfor %}
                 </p>
 
-                <p> {{ form.password_confirm.label}}</br>
-                    {{ form.password_confirm(style="background-color:white;")}}
+                <p>{{form.password_confirm.label}}</br>
+                    {{ form.password_confirm(class="form-control rounded-2 bg-white")}}
                     {% for error in form.password_confirm.errors %}
                      <span class="error-message">{{ error }}</span>
                     {% endfor %}
                 </p>
 
-                <p> {{ form.first_name.label }}</br>
-                    {{ form.first_name(style="background-color:white;") }}
+                <p>{{ form.first_name.label }}</br>
+                    {{ form.first_name(class="form-control rounded-2 bg-white") }}
                     {% for error in form.first_name.errors %}
                      <span class="error-message">{{ error }}</span>
                     {% endfor %}
                 </p>
 
-                <p> {{ form.last_name.label }}</br>
-                    {{ form.last_name(style="background-color:white;")  }}
+                <p>{{ form.last_name.label }}</br>
+                    {{ form.last_name(class="form-control rounded-2 bg-white")  }}
                     {% for error in form.last_name.errors %}
                      <span class="error-message">{{ error }}</span>
                     {% endfor %}

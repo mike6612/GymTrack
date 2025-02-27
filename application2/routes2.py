@@ -7,7 +7,7 @@ from bson import ObjectId
 from flask_restx import Resource
 
 ##########################################################
-@api.route('/api','/api/')
+@api.route('/')
 class GetAndPost(Resource):
 
     #GET ALL
@@ -22,7 +22,7 @@ class GetAndPost(Resource):
         user.save()
         return jsonify(User.objects(user_id=data['user_id']))
 
-@api.route('/api/<idx>')
+@api.route('/<idx>')
 class GetUpdateDelete(Resource):
 
     # GET ONE
@@ -44,8 +44,6 @@ class GetUpdateDelete(Resource):
 
 #########################################################
 @app2.route("/")
-@app2.route("/index2")
-@app2.route("/home")
 def index2():
     return render_template("index2.html", index2=True)
 
@@ -61,7 +59,7 @@ def login():
             flash(f"{user.first_name}, you are successfully logged in!", "success")
             session['user_id'] = user.user_id
             session['username'] = user.first_name
-            return redirect("/index2")
+            return redirect("/")
         else:
             flash("Sorry, something went wrong.", "danger")
     return render_template("login.html", title="Login", form=form)
@@ -140,11 +138,15 @@ def delete(section_title):
 def update(section_title):
     sections = WorkoutSection.objects(section_title=section_title).first()
     if request.method == 'POST':
+        section_title = request.form['section_title']
+
+        if len(section_title) > 50 or len(section_title) == 0:
+            flash("Section title cannot exceed 50 characters or be empty.", "danger")
+            return render_template('update.html', sections=sections)
+        
         if sections:
-            section_title = request.form['section_title']
             sections.section_title = section_title
             sections.save()
-
             return redirect('/edit1st')
     return render_template('update.html', sections=sections)
 
@@ -192,11 +194,12 @@ def createnote():
     form = AddWorkoutNoteForm()
     user_id = session.get('user_id')  # Assuming user_id is stored in session
 
+
     # Check if the user is logged in
     if not session.get('username'):
         flash("Please login or signup.", "danger")
         return redirect(url_for('login'))
-
+    form.section_title.choices = [section.section_title for section in WorkoutSection.objects()]
     # Handle form submission
     if form.validate_on_submit():
         section_title = request.form.get('section_title')

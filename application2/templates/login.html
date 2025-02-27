@@ -1,5 +1,5 @@
  {% extends "layout2.html" %}
-
+ <!-- {% block body_class %}green-background{% endblock %} -->
     {% block content %}
 
     <div class="d-flex justify-content-center align-items-center">
@@ -11,7 +11,7 @@
 
                 <p>
                         {{ form.email.label }} <br>
-                        {{ form.email(size=35, style="background-color:white;")}}
+                        {{ form.email(class="form-control rounded-2 bg-white")}}
                         {% for error in form.email.errors %}
                                 <span class="error-message">{{ error }}</span>
                         {% endfor %}
@@ -19,7 +19,7 @@
 
                 <p>
                         {{ form.password.label }} <br>
-                        {{ form.password(size=15, style="background-color:white;") }}
+                        {{ form.password(class="form-control rounded-2 bg-white") }}
                         {% for error in form.password.errors %}
                                 <span class="error-message">{{ error }}</span>
                         {% endfor %}

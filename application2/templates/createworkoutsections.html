@@ -10,7 +10,7 @@
                 {{ form.hidden_tag() }}
                 <div class="form-group" style="margin-left: 100px;">
                     {{ form.section_title.label }} <br>
-                    {{ form.section_title(size=35, class_="rounded-0",style="background-color:white;") }}
+                    {{ form.section_title(class="form-control rounded-2 bg-white", autocomplete="off")}}
                     {% for error in form.section_title.errors %}
                         <span class="error-message">{{ error }}</span>
                     {% endfor %}
